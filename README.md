@@ -26,6 +26,7 @@ https://drive.google.com/file/d/1Z2R4qR3bQqWbhwgdK__WiYkaZivXpNql/view?usp=shari
 2. Docker 起動
 `docker-compose up --build`
 
-
 ## 注意事項
-Google Work Space のアカウント認証にてログインする際は、あらかじめACTIONのアカウント作成をした状態で行うこと
+・Google Work Space のアカウント認証にてログインする際は、あらかじめACTIONのアカウント作成をした状態で行うこと
+※本リポジトリは公開テスト用です。開発者は以下リポジトリにて作業を行なってください。
+https://github.com/nna1016/ACTION-Front
