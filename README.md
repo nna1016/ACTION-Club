@@ -1,6 +1,9 @@
 # サークル活動支援サービス｜ACTION
 
-## 概要資料
+## サービスURL（事前申し込みにてテストアカウントを発行いたします）
+https://action-club.jp/
+
+## サービス概要資料
 https://drive.google.com/file/d/1Z2R4qR3bQqWbhwgdK__WiYkaZivXpNql/view?usp=sharing
 
 ## 導入実績
