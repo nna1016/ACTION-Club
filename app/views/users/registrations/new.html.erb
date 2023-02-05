@@ -1,0 +1,118 @@
+<div class="Page-Area">
+  <div class="Page-Title">
+  アカウントを作成
+  </div>
+  <div class="Page-Text">
+  サークル活動支援サービス「ACTION」ユーザーアカウントを作成いたします。<br>
+  以下、フォームをすべてご入力の上お進みください。
+  </div>
+  <div class="Dashboard-DoubleGroup-w">
+    <div class="Dashboard-Contents">
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= bootstrap_devise_error_messages! %>
+
+        <div class="field">
+          <%= f.hidden_field :password, autocomplete: "new-password",:value =>"1qaz2wsx3edc4rfv" %>
+        </div>
+
+        <div class="field">
+          <%= f.hidden_field :password_confirmation, autocomplete: "new-password",:value =>"1qaz2wsx3edc4rfv" %>
+        </div>
+
+        <div class="field">
+          <%= f.hidden_field :email,:value =>"qazwsxedcrftgbyhjnuj@sdf.ad" %>
+        </div>
+
+
+        <%= f.fields_for :profile do |f| %>
+
+
+        <div class="form-group">
+          <%= f.label "氏名" %>
+          <%= f.text_field :username, required: true, autocomplete: 'name', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "フリガナ" %>
+          <%= f.text_field :ruby, required: true, autocomplete: 'ruby', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "ローマ字（名）" %><br />
+          <%= f.text_field :first_name %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "ローマ字（姓）" %><br />
+          <%= f.text_field :last_name %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "ニックネーム" %><br />
+          <%= f.text_field :nickname %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "性別" %>
+          <%= f.select :sex, options_for_select([['性別を選択', 'その他'], ['男性', '男性'],['女性', '女性'], ['その他', 'その他']]), class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "生年月日" %>
+          <%= f.date_field :dob, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "電話番号" %>
+          <%= f.text_field :phone, required: true, autocomplete: 'phone', class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "学籍番号" %>
+          <%= f.text_field :student_num, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "所属学科" %>
+          <%= f.collection_select :course_id, Course.all, :id, :name, :prompt => "学科を選択", class: 'form-control' %>
+
+        </div>
+
+        <div class="form-group">
+          <%= f.label "担任教員名（敬称略）" %>
+          <%= f.text_field :teacher_name, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "通学状況" %>
+          <%= f.select :commute, options_for_select([['通学形態を選択してください', ''], ['実家', '実家'], ['ひとり暮らし', 'ひとり暮らし'], ['京浜寮', '京浜寮'], ['城南寮', '城南寮'], ['蒲田寮', '蒲田寮'], ['多摩川寮', '多摩川寮'], ['その他', 'その他']]), class: 'form-control'  %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "保護者氏名" %>
+          <%= f.text_field :parent_name, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "保護者電話番号" %>
+          <%= f.text_field :parent_phone, required: true, class: 'form-control' %>
+        </div>
+
+        <div class="form-group">
+          <%= f.label "保護者住所" %>
+          <%= f.text_field :parent_address, required: true, class: 'form-control' %>
+        </div>
+
+      <% end %>
+
+      <div class="form-group">
+        <%= f.submit "Sign up", class: 'Submit-btn' %>
+      </div>
+    <% end %>
+
+    </div>
+    <div class="Dashboard-Contents">
+
+    </div>
+  </div>
+</div>

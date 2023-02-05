@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ACTION | サークル活動支援サービス</title>
+    <link href="<%= image_path("favicon.ico") %>" rel="shortcut icon" type="image/x-icon" />
+    <%= favicon_link_tag 'xxxx180x180.png', rel: 'apple-touch-icon', sizes: '180x180', type: 'image/png' %>
+    <%= favicon_link_tag 'xxxx192x192.png', rel: 'android-touch-icon', sizes: '192x192', type: 'image/png' %>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons', media: 'all' %>
+    <%= stylesheet_link_tag 'https://fonts.googleapis.com/icon?family=Material+Icons%7CMaterial+Icons+Outlined', media: 'all' %>
+    
+  </head>
+  <body>
+    <% unless current_page?(attendance_auto_path) || current_page?(attendance_error_path) %>
+      <%= render 'users/shared/header' %>
+    <% end %>
+    <%= render 'users/shared/flash_messages' %>
+    <%= yield %>
+  </body>
+</html>
